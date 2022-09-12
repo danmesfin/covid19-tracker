@@ -21,8 +21,8 @@ export default function Listed() {
         setLoading(false);
       });
   }, []);
+if (isLoading) return <div>Loading..</div>;
 
-if (isLoading) return <p>Loading ...</p>
       
   return (
     <div className="overflow-x-auto relative mt-4 mx-2 ">

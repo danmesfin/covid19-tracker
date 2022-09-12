@@ -153,7 +153,7 @@ export default function Index() {
       </div>
 
       <div className="col-span-2 shadow-sm border-black mt-2 p-2">
-        <Countries />
+        
       </div>
     </div>
   );
