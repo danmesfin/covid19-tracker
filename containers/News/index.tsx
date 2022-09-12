@@ -7,16 +7,18 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import PaginatedItems from "../../components/Pagination";
 
+
+const API_KEY = process.env.NEWSAPI_KEY;
+const API_URL = `https://newsapi.org/v2/everything?q=coronavirus&covid&apiKey=${API_KEY}`
 export default function Profile() {
   const [data, setData]: [any | null, Dispatch<SetStateAction<null>>] =
     useState(null);
   const [isLoading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     setLoading(true);
-    fetch(
-      "https://newsapi.org/v2/everything?q=coronavirus&covid&apiKey=043d1f58d0fe49e49bd3980c332e1ddd"
-    )
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {
         setData(data);

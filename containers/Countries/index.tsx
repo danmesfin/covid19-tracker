@@ -6,10 +6,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { Key, useEffect, useState } from "react";
 import Link from "next/link";
+import Spinner from '../../components/Spinner'
 
 export default function Listed() {
   const [data, setData]: any = useState(null);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -21,6 +22,8 @@ export default function Listed() {
       });
   }, []);
 
+if (isLoading) return <p>Loading ...</p>
+      
   return (
     <div className="overflow-x-auto relative mt-4 mx-2 ">
       <div className="flex flex-col my-2 px-3 py-2 bg-red-100 shadow-sm">
@@ -48,14 +51,11 @@ export default function Listed() {
             </th>
           </tr>
         </thead>
-        {isLoading ? (
-          <></>
-        ) : (
           <tbody>
             {data.slice(0, 14).map((item: Key | null | undefined | any) => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                key={item}
+                key={item.country}
               >
                 <Link href={`/country/${item.countryInfo.iso2}`}>
                   <th className="cursor-pointer py-4 px-3 font-medium text-gray-900 whitespace-nowrap hover:bg-red-800 dark:text-white">
@@ -73,7 +73,6 @@ export default function Listed() {
               </tr>
             ))}
           </tbody>
-        )}
       </table>
     </div>
   );
