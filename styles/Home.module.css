@@ -1,0 +1,18 @@
+
+
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .logo img {
+    filter: invert(1);
+  }
+}

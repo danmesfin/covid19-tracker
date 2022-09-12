@@ -1,0 +1,25 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-container {
+  height: 400px;
+  width: 500px;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .leaflet-container {
+    height: 400px;
+    width: 200px;
+    margin: auto;
+  }
+}
+@media (max-width: 992px) {
+  .leaflet-container {
+    height: 300px;
+    width: 350px;
+    margin: auto;
+  }
+}
