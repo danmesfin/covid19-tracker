@@ -16,11 +16,6 @@ export default function Listed() {
         setLoading(false);
       });
   }, []);
-<<<<<<< HEAD
-if (isLoading) return <div>Loading..</div>;
-
-      
-=======
 if (isLoading) {return  (   <div className="overflow-x-auto relative mt-4 mx-2 ">
 <div className="flex flex-col my-2 px-3 py-2 bg-red-100 shadow-sm">
   <span className=" text-red-600 text-md font-bold">
@@ -52,7 +47,6 @@ if (isLoading) {return  (   <div className="overflow-x-auto relative mt-4 mx-2 "
       </tbody>
       </table>
       </div>);}
->>>>>>> b46b78d3cd8d968f903b4ba71fa794c40eb6bb3b
   return (
     <div className="overflow-x-auto relative mt-4 mx-2 ">
       <div className="flex flex-col my-2 px-3 py-2 bg-red-100 shadow-sm">
