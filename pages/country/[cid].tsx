@@ -1,8 +1,4 @@
-/**
- *
- *
- * @format
- */
+
 /* eslint-disable @next/next/no-img-element*/
 
 import { useState, useEffect } from "react";
@@ -172,9 +168,11 @@ const Post: NextPage<Object | any> = ({ data }) => {
             </div>
           </div>
         ))}
+        {/*
         <div className="w-3/4">
           <News />
         </div>
+        */}
       </div>
     </>
   );
