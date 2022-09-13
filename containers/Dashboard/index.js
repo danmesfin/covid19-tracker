@@ -147,9 +147,10 @@ export default function Index() {
             <BarGraph id={"all"} />
           </div>
         </div>
-        <div className="flex justify-start w-full mt-1">
+    { /* <div className="flex justify-start w-full mt-1">
           <News />
         </div>
+ */ }
       </div>
 
       <div className="col-span-2 shadow-sm border-black mt-2 p-2">
