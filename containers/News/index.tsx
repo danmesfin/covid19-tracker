@@ -12,7 +12,7 @@ export default function Profile() {
     useState(null);
   const [isLoading, setLoading] = useState(false);
   
-  const API_KEY = process.env.NEWSAPI_KEY;
+  const API_KEY = process.env.NEXT_PUBLIC_NEWSAPI_KEY;
   const API_URL = `https://newsapi.org/v2/everything?q=coronavirus&covid&apiKey=${API_KEY}`
   
   useEffect(() => {
