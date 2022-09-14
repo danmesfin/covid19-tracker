@@ -66,10 +66,10 @@ export const data = {
 export default function LineChart({name, value}:{ name: String, value: ReactNode}) {
   //const newData = {...data, ...datasets}
   return (
-    <div className='relative md:w-96 px-1 py-2 m-2 shadow-sm rounded-md border-2 border-green-100'>
+    <div className='relative md:w-96 px-1 py-2 m-2 shadow-sm rounded-md border-2 border-green-100 dark:border-gray-700'>
         <div className='flex flex-col p-1 m-2'>
-            <div className='text-2xl font-medium'>{name}</div>
-            <div className='text-2xl font-medium'>{value}</div>
+            <div className='text-2xl font-medium dark:text-white'>{name}</div>
+            <div className='text-2xl font-medium dark:text-white'>{value}</div>
         </div>
         <div className='absolute w-48 bottom-0 right-0'>
           <Line options={options} width={100} height={50} data={data} />

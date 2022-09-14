@@ -32,7 +32,7 @@ function Footer() {
     { title: "Infected Countries", link: "/country/US" },
   ];
   return (
-    <footer className="bottom-0 bg-slate-800 p-3 md:py-10 text-white">
+    <footer className="bottom-0 bg-slate-800 mt-2 p-3 md:py-10 text-white dark:border border-gray-700">
       <div className="flex flex-wrap md:flex-nowrap justify-between mt-2 ">
         <div className="w-full md:w-1/3flex flex-col mx-2 px-3 py-4">
           <span className="mx-2 text-lg font-bold py-3">Site map</span>
@@ -64,7 +64,7 @@ function Footer() {
           <span className="mx-2 text-lg font-bold py-3">Contact</span>
           <form
             onSubmit={() => onsubmit}
-            className="w-full p-2 mx-2 rounded-md text-black border-2 border-blue-900"
+            className="w-full p-2 mx-2 rounded-md text-black border-2 border-gray-700 shadow-md"
           >
             <input
               type="email"
@@ -74,7 +74,7 @@ function Footer() {
             <br></br>
             <input type="text" placeholder="..." className="mt-3 rounded-sm" />
             <button
-              className="mt-2 bg-blue-600 shadow-md shadow-blue-700 px-3 py-1 rounded-md"
+              className="mt-2 bg-gray-600 shadow-sm shadow-gray-900 px-3 py-1 rounded-md"
               type="submit"
             >
               Send
@@ -83,7 +83,7 @@ function Footer() {
         </div>
       </div>
       <hr></hr>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-2 text-gray-500">
         <span> &copy; Covid-tracker {new Date().getFullYear()} </span>
       </div>
     </footer>

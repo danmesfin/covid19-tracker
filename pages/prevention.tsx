@@ -32,16 +32,16 @@ const Preventions: NextPage = () => {
     },
   ];
   return (
-    <div className="container bg-gray-100">
+    <div className="container bg-gray-100 dark:bg-gray-800 mx-auto">
       <Head>
         <title>Preventions - corona virus</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className="pt-8 pb-8">
+      <main className="pt-8 pb-8 flex flex-col">
         {preventionMethods.map((item) => (
           <div
             key={item.title}
-            className="flex py-2 justify-center flex-wrap md:flex-nowrap shadow-sm bg-blue-50 "
+            className="flex py-2 justify-center flex-wrap md:flex-nowrap shadow-sm bg-blue-50 dark:text-white  dark:bg-gray-800"
           >
             <div className="flex">
               <Image

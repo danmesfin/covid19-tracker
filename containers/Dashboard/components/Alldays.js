@@ -18,7 +18,7 @@ function Alldays() {
   }, []);
   if (isLoading)
     return (
-      <div className="flex animate-pulse w-full h-full m-2 bg-gray-200 rounded-md"></div>
+      <div className="flex animate-pulse w-full m-2 bg-gray-200 rounded-md dark:bg-gray-700"></div>
     );
   if (!data)
     return (

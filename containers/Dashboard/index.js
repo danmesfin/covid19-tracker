@@ -47,11 +47,11 @@ export default function Index() {
   };
 
   return (
-    <div className="grid grid-cols-1  md:grid-cols-6 md:gap-4 justify-center rounded-sm shadow-sm">
-      <div className="col-span-4 md:p-2 mt-3">
+    <div className="grid grid-cols-1 mt-3 md:grid-cols-6 md:gap-4 justify-center dark:bg-gray-800">
+      <div className="col-span-4 md:p-2 mt-3 dark:border border-gray-700 rounded-md">
         <div className="flex flex-col justify-center py-2 text-gray-700 rounded-md border-l-2 border-black  ">
           <div className="flex">
-            <p className="mx-2 text-sm p-2 font-semibold ">
+            <p className="mx-2 text-sm p-2 font-semibold dark:text-gray-500">
               Coronavirus disease (COVID-19) is an infectious disease caused by
               the SARS-CoV-2 virus. Most people who fall sick with COVID-19 will
               experience mild to moderate symptoms and recover without special
@@ -81,7 +81,7 @@ export default function Index() {
               </TwitterShareButton>
             </div>
           </div>
-          <div className="flex pt-1 md:p-1 flex-wrap md:flex-nowrap uppercase font-sanserif">
+          <div className="flex pt-1 md:p-1 flex-wrap md:flex-nowrap uppercase font-sanserif dark:bg-gray-700 rounded-md">
             <div className="hover:bg-blue-50 md:w-48 m-2 bg-red-100 rounded-md shadow-md">
               <div className="text-sm font-bold md:text-md p-2 bg-red-400 rounded-md">
                 <span className="mx-1 text-red-900">Total cases</span>
@@ -135,21 +135,25 @@ export default function Index() {
           </div>
         </div>
         <div className="flex flex-wrap md:flex-nowrap justify-center mt-5 p-2">
-          <div className="w-full md:w-2/3 p-2 bg-white shadow-sm rounded-sm">
+          <div className="w-full md:w-2/3 p-2 bg-white shadow-sm dark:bg-gray-700 rounded-md dark:text-white">
             <Alldays />
           </div>
-          <div className="md:w-1/3 flex md:h-full mt-3 md:mt-0 mx-auto md:mx-2 p-2 md:p-1 bg-white shadow-sm rounded-sm">
+          <div className="md:w-1/3 flex md:h-full mt-3 md:mt-0 mx-auto md:mx-2 p-2 md:p-1 bg-white shadow-sm dark:bg-gray-700 rounded-md">
             {isLoading ? <Spinner /> : <Piechart datasets={chartsData} />}
           </div>
         </div>
         <div className="flex flex-wrap md:flex-nowrap mt-3">
-          <div className="w-full md:mx-2 md:p-8 ">
+          <div className="w-full md:mx-2 md:p-8 dark:bg-gray-700 rounded-md shadow-md dark:shadow-gray-900 ">
             <BarGraph id={"all"} />
           </div>
         </div>
-        <div className="flex justify-start w-full mt-1">
+        {/* uncomment below if you want load the news section, but
+         first you have to set the .env file and NewsAPi key as 
+          NEXT_PUBLIC_NEWSAPI_KEY
+          <div className="flex justify-start w-full mt-1">
           <News />
-        </div>
+  </div>
+  */}
       </div>
 
       <div className="col-span-2 shadow-sm border-black mt-2 p-2">

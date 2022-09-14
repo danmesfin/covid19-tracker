@@ -16,12 +16,12 @@ function Navbar() {
   const Menu = [
     { title: "Home", link: "/" },
     { title: "Map", link: "/map" },
-    { title: "Prevention", link: "/prevention" },
     { title: "Analytics", link: "/analytics" },
-    { title: "Github", link: "/github.com/danmesfin/covid-19-tracker" },
+    { title: "Prevention", link: "/prevention" },
+    { title: "Github", link: "/github.com/danmesfin/covid19-tracker" },
   ];
   return (
-    <nav className="sticky top-0 z-[99] bg-white border-gray-200 px-2 sm:px-4 py-2 rounded shadow-sm dark:bg-gray-900">
+    <nav className="sticky top-0 z-[99] bg-white border-gray-200 px-2 sm:px-4 py-2 shadow-sm dark:bg-gray-900">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="cursor-pointer">
           <a>
@@ -29,7 +29,7 @@ function Navbar() {
               <Image alt="logo" src="/favicon.ico" width={38} height={38} />
               <p className="my-auto">
                 Track
-                <span className="text-black">Covid</span>
+                <span className="text-black dark:text-red-600">Covid</span>
               </p>
             </div>
           </a>

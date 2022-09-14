@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" title="corona virus tracker website" />
       </Head>
-      <main className="flex flex-col mx-auto">
+      <main className="flex flex-col mx-auto dark:bg-gray-800">
         <Dashboard />
       </main>
     </div>

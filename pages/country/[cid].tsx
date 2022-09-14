@@ -1,8 +1,3 @@
-/**
- *
- *
- * @format
- */
 /* eslint-disable @next/next/no-img-element*/
 
 import { useState, useEffect } from "react";
@@ -107,7 +102,8 @@ const Post: NextPage<Object | any> = ({ data }) => {
               </div>
             </div>
 
-            <div className="flex flex-wrap md:flex-nowrap m-2 px-3 py-2 font-medium border rounded-md border-black shadow-sm">
+            <div className="flex flex-wrap md:flex-nowrap m-2 px-3 py-2 font-medium border rounded-md
+             border-black shadow-sm  dark:border-gray-700">
               <div className="md:w-1/3 flex-col text-sm md:text-lg font-medium py-2 px-2 md:px-6">
                 <div className="flex">
                   <img
@@ -116,7 +112,7 @@ const Post: NextPage<Object | any> = ({ data }) => {
                     className="w-24"
                   />
                 </div>{" "}
-                <span className="p-1">{country.country} Overview</span>
+                <span className="p-1 dark:text-white">{country.country} Overview</span>
               </div>
               <div className="w-full md:w-2/3 flex justify-between  text-red-600">
                 <div className="flex-col">
@@ -145,13 +141,14 @@ const Post: NextPage<Object | any> = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="flex-row md:flex justify-center m-2 px-3 py-2 border rounded-md border-black">
+            <div className="flex-row md:flex justify-center m-2 px-3 py-2 border
+                      rounded-md border-black  dark:border-gray-700">
               <LineChart name={"Criticals in ICU"} value={country.critical} />
               <LineChart name={"Today cases"} value={country.todayCases} />
               <LineChart name={"Today deaths"} value={country.todayDeaths} />
             </div>
             <div className="flex flex-wrap md:flex-nowrap pt-4 md:px-4 ">
-              <div className="w-full md:w-1/2 md:p-4 border border-black rounded-sm">
+              <div className="w-full md:w-1/2 md:p-4 border border-black rounded-sm  dark:border-gray-700">
                 <History id={cid} />
               </div>
               <div className="w-full md:w-1/2 md:mx-2 md:p-4 flex md:flex-nowrap justify-center">
@@ -172,9 +169,13 @@ const Post: NextPage<Object | any> = ({ data }) => {
             </div>
           </div>
         ))}
+        {/* uncomment below if you want load the news section, but
+         first you have to set the .env file and NewsAPi key as 
+          NEXT_PUBLIC_NEWSAPI_KEY
         <div className="w-3/4">
           <News />
         </div>
+                  */}
       </div>
     </>
   );

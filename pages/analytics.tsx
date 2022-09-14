@@ -2,36 +2,37 @@
 
 import { NextPage } from "next";
 import Map from "../containers/Dashboard/Map";
-import PaginatedItems from "../components/Pagination";
 import BarGraph from "../containers/Dashboard/components/BarGraph";
 import Piechart from "../containers/Dashboard/components/Charts";
 import Listed from "../containers/Dashboard/components/Listed";
 import Alldays from "../containers/Dashboard/components/Alldays";
 const Analytics: NextPage = () => {
   return (
-    <div className="container my-2">
-      <div className="flex flex-wrap md:flex-nowrap justify-center md:mt-3 md:mx-4 border border-gray-400 rounded-md">
-        <div className="w-full z-0 md:w-1/2 mt-3 md:mx-2 border rounded-md">
-          <p className="text-sm font-bold justify-center mx-2 p-1">
+    <div className="container my-2 mx-auto">
+      <div className="flex flex-wrap md:flex-nowrap justify-center md:mt-8 md:mx-4  rounded-md">
+        <div className="w-full z-0 md:w-1/2 mt-3 md:mx-2 border border-black shadow-md rounded-md dark:bg-gray-700">
+          <p className="text-sm font-bold justify-center mx-2 p-1 dark:text-white">
             | Click on marker to see details
           </p>
           <Map />
         </div>
-        <div className="w-full md:w-1/2 mt-3 md:mx-2 border rounded-md">
-          <p className="text-sm font-bold justify-center mx-2 p-1">
+        <div className="w-full md:w-1/2 mt-3 md:mx-2 border border-black rounded-md dark:bg-gray-700">
+          <p className="text-sm font-bold justify-center mx-2 p-1 dark:text-white">
             Record for the past 365 days
           </p>
           <Alldays />
         </div>
       </div>
       <div className="flex flex-wrap md:flex-nowrap mt-5 md:mx-2">
-        <div className="w-full justify-center md:w-1/2 mt-3 md:mx-2 border border-black">
-          <div className="flex justify-center font-bold text-sm md:text-lg">
+        <div className="w-full justify-center md:w-1/2 mt-3 md:mx-2 border border-black dark:bg-gray-700 rounded-md">
+          <div className="flex mt-2 justify-center font-bold text-sm md:text-lg dark:text-white ">
             <p>Continental data - in order of most active cases</p>
           </div>
-          <Listed />
+          <div className="md:flex">
+            <Listed />
+          </div>
         </div>
-        <div className="w-full md:w-1/2 mt-3 md:mx-2 border border-black">
+        <div className="w-full md:w-1/2 mt-3 md:mx-2 border border-black dark:bg-gray-700 rounded-md">
           <BarGraph id={"all"} />
         </div>
       </div>

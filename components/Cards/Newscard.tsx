@@ -22,7 +22,7 @@ function Newscard({
   return (
     <div className="mt-2 w-full flex">
       <a href={href} className="w-full">
-        <div className="flex flex-wrap justify-start md:flex-nowrap rounded-md border border-gray-400 border-opacity-10 hover:bg-gray-200 shadow-sm">
+        <div className="flex flex-wrap justify-start md:flex-nowrap rounded-md border border-gray-400 border-opacity-10 hover:bg-gray-200 dark:hover:bg-gray-700 shadow-sm">
           {" "}
           <div className="w-full flex justify-center md:w-1/4 mx-2 md:m-0">
             <img
@@ -32,9 +32,9 @@ function Newscard({
             />
           </div>
           <div className="w-full md:w-3/4 flex flex-col mx-2 py-2">
-            <p className="py-1 text-md font-bold">{header}</p>
+            <p className="py-1 text-md font-bold dark:text-white">{header}</p>
             <p className="text-sm text-blue-500">{author}</p>
-            <p className="block justify-end text-xs text-gray-600 mx-2">
+            <p className="block justify-end text-xs text-gray-600 mx-2 dark:text-slate-200">
               {"publishedAt"}
             </p>
           </div>

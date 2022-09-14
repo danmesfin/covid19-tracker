@@ -57,15 +57,15 @@ export default function PaginatedItems({ itemsPerPage, items }) {
         containerClassName="font-semibold"
         breakLabel="..."
         breakLinkClassName="mx-1 px-1"
-        nextClassName="font-semibold border rounded-sm mx-1 p-1 hover:bg-gray-200"
-        previousClassName="font-semibold border rounded-sm mx-1 p-1 hover:bg-gray-200"
-        pageClassName="font-semibold border rounded-md mx-1 px-2 hover:bg-gray-200"
-        activeClassName="bg-red-400 hover:bd-red-400"
-        nextLabel="next>"
+        nextClassName="font-semibold border rounded-sm mx-1 p-1 hover:bg-gray-200 dark:border-gray-700"
+        previousClassName="font-semibold border rounded-sm mx-1 p-1 hover:bg-gray-200 dark:border-gray-700"
+        pageClassName="font-semibold border rounded-md mx-1 px-2 hover:bg-gray-200 dark:text-red-600 dark:border-gray-700"
+        activeClassName="bg-red-400 hover:bg-red-400 dark:border-gray-700"
+        nextLabel="Next>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="<previous"
+        previousLabel="<Prev"
         renderOnZeroPageCount={null}
       />
     </>

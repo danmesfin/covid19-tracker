@@ -5,11 +5,13 @@ import Map from "../containers/Dashboard/Map";
 
 const Maps: NextPage = () => {
   return (
-    <div className="flex flex-col md:p-2">
-      <p className="text-sm mx-auto">
+    <div className="flex flex-col md:p-2 dark:bg-gray-800">
+      <p className="text-sm mx-auto dark:text-white">
         Click on the marker icon to see detail about specfic country.
       </p>
+      <div className="my-5">
       <Map />
+      </div>
     </div>
   );
 };

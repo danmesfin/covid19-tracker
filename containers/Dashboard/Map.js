@@ -19,15 +19,14 @@ function Map() {
 
   if (isLoading)
     return (
-      <div className="flex animate-pulse bg-white w-full h-96 m-2 border shadow-sm rounded-md">
-        <div className="bg-gray-200 h-96 m-2 border rounded-md"></div>
+      <div className="flex animate-pulse bg-white w-full h-96 m-2 border shadow-sm dark:bg-gray-700 rounded-md">
+        <div className="bg-gray-200 h-96 m-2 border dark:bg-gray-700 rounded-md"></div>
       </div>
     );
   if (!data) return <p>No profile data</p>;
 
   return (
     <div className="z-0">
-      <div className="text"></div>
       <Mymap data={data} />
     </div>
   );

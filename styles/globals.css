@@ -6,7 +6,7 @@
 
 .leaflet-container {
   height: 400px;
-  width: 500px;
+  width: 600px;
   margin: auto;
 }
 @media (max-width: 600px) {

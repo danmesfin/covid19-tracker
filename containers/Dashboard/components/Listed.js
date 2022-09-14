@@ -23,7 +23,7 @@ export default function Listed() {
   if (!data) return <p>No profile data</p>;
 
   return (
-    <div className="flex p-2">
+    <div className="flex p-2 mx-auto">
       <div className="overflow-x-auto relative m-2 shadow-lg ">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
