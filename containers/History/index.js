@@ -1,5 +1,3 @@
-/** @format */
-
 import { useEffect, useState } from "react";
 import BarGraph from "../../components/Charts/BarChart";
 import Spinner from "../../components/Spinner";
