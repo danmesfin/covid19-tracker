@@ -1,8 +1,3 @@
-/**
- * /* eslint-disable @next/next/no-html-link-for-pages
- *
- * @format
- */
 
 import React, { useState } from 'react';
 import Link from "next/link";
@@ -18,7 +13,7 @@ function Navbar() {
     { title: "Map", link: "/map" },
     { title: "Analytics", link: "/analytics" },
     { title: "Prevention", link: "/prevention" },
-    { title: "Github", link: "/github.com/danmesfin/covid19-tracker" },
+    { title: "Github", link: "http:///github.com/danmesfin/covid19-tracker" },
   ];
   return (
     <nav className="sticky top-0 z-[99] bg-white border-gray-200 px-2 sm:px-4 py-2 shadow-sm dark:bg-gray-900">
