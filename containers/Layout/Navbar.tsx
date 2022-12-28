@@ -1,9 +1,3 @@
-/**
- * /* eslint-disable @next/next/no-html-link-for-pages
- *
- * @format
- */
-
 import React, { useState } from "react";
 import Link from "next/link";
 import Navitem from "../../components/NavItem/Navitem";
