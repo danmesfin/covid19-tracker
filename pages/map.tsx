@@ -9,7 +9,7 @@ const Maps: NextPage = () => {
       <p className="text-sm mx-auto dark:text-white">
         Click on the marker icon to see detail about specfic country.
       </p>
-      <div className="my-5">
+      <div className="z-[0] my-5">
       <Map />
       </div>
     </div>
