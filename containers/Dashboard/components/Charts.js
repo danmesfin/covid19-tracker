@@ -25,7 +25,7 @@ export const data = {
         "rgba(75, 192, 192, 1)",
       ],
       borderWidth: 1,
-      cutout: 80,
+      cutout: 90,
     },
   ],
 };

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Navitem from "../../components/NavItem/Navitem";
 import Image from "next/image";
 // import { Icon } from "leaflet";
+import ThemeChanger from "../../components/Button";
 
 function Navbar() {
+  const [mounted, setMounted] = useState(false);
+
   let [activeIdx, setActiveIdx] = useState(0);
   const [navActive, setNavActive] = useState(false);
   const Menu = [
@@ -14,8 +17,18 @@ function Navbar() {
     { title: "Prevention", link: "/prevention" },
     { title: "Github", link: "https://github.com/danmesfin/covid19-tracker" },
   ];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const renderThemechanger = () => {
+    if (!mounted) return null;
+    return <ThemeChanger />;
+  };
+
   return (
-    <nav className="sticky top-0 z-[99] bg-white border-b border-gray-700 px-2 sm:px-4 py-2 shadow-sm dark:bg-gray-900">
+    <nav className="sticky top-0 z-[99] bg-white px-2 sm:px-4 py-2 shadow-sm dark:bg-gray-900">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="cursor-pointer">
           <a>
@@ -53,11 +66,14 @@ function Navbar() {
             ></path>
           </svg>
         </button>
+
         <div
           className={`w-full md:block md:w-auto ${navActive ? "" : "hidden"}`}
           id="navbar-default"
         >
           <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <div className="flex w-10"> {renderThemechanger()}</div>
+
             {Menu.map((menu, idx) => (
               <div
                 key={menu.title}

@@ -31,9 +31,9 @@ export default function Index() {
         label: "covid-19 distribution",
         data: [data?.deaths, data?.recovered, data?.cases],
         backgroundColor: [
-          "rgba(0, 0, 0, 0.5)",
-          "rgba(1, 180, 65, 0.5)",
-          "rgba(255, 99, 132, 0.5)",
+          "rgba(0, 0, 0, 0.8)",
+          "rgba(1, 180, 65, 0.8)",
+          "rgba(255, 99, 132, 0.8)",
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",

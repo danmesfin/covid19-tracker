@@ -14,7 +14,9 @@ const Analytics: NextPage = () => {
           <p className="text-sm font-bold justify-center mx-2 p-1 dark:text-white">
             | Click on marker to see details
           </p>
-          <Map />
+          <div className="flex py-3 ">
+            <Map />
+          </div>
         </div>
         <div className="w-full md:w-1/2 mt-3 md:mx-2 border border-black rounded-md dark:bg-slate-800">
           <p className="text-sm font-bold justify-center mx-2 p-1 dark:text-white">
